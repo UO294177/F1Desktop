@@ -1,0 +1,133 @@
+/* Ignacio Fernández Suárez - UO294177*/
+
+/* Especificidad 001*/
+body {
+    font-family: 'Futura', 'Century Gothic', sans-serif;
+    background-color: white;
+    color: #151515;
+}
+
+/* Especificidad 002*/
+body p {
+    font-size: 1.1em;
+}
+
+body h4 {
+    font-size: 2em;
+}
+
+/* Especificidad 002*/
+p a {
+    font-weight: bold;
+}
+
+/* Especificidad 001*/
+header {
+    background-color: #ff0000;
+    /*Color primer plano heredado: */
+}
+
+/* Especificidad 003*/
+header h1 a{
+    color: #151515;
+    text-decoration: none;
+    /*Color de fondo heredado: Body -> white*/
+}
+
+/* Especificidad 002*/
+header + p {
+    font-size: 0.9em;
+}
+
+/* Especificidad 001*/
+a{
+    color: #151515;
+    text-decoration: none;
+    /*Color de fondo heredado: Body -> white*/
+}
+
+/* Especificidad 011*/
+a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Especificidad 001*/
+footer{
+    background-color: #151515;
+    /*Color de primer plano heredado: Body-> #151515*/
+}
+
+/* Especificidad 001*/
+ul,ol,dl{
+    list-style-type: square; /* Cambia la viñeta a un cuadrado */
+    font-size: 1.1em; /* Cambia el tamaño de la fuente */
+    color: #151515; /* Cambia el color del texto */
+    /*Color de fondo heredado: */
+}
+
+/* Especificidad 003*/
+ul ul li {
+    color: rgb(62, 62, 62);
+    /*Color de fondo heredado: */
+}
+
+/* Especificidad 001*/
+dt{
+    font-size: 1.4em;
+    color: white;
+    background-color: #ff0000;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+/* Especificidad 001*/
+dd{
+    font-weight: lighter;
+    font-size: 1.05em;
+}
+
+/* Especificidad 001*/
+table {
+    table-layout: fixed;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    background-color: white;
+    /*Color de primer plano heredado: */
+    box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.1); /*Sombra*/
+    border-radius: 0.25em;
+    overflow: hidden;
+}
+
+/* Especificidad 001*/
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Especificidad 001*/
+th {
+    background-color: #f2f2f2;
+    color: #151515;
+    font-weight: bold;
+}
+
+/* Especificidad 011*/
+tr:hover {
+    background-color: #ff0000;
+    /*Color de primer plano heredado: */
+}
+
+/* Especificidad 001*/
+video {
+    width: 50%;
+    height: 50%;
+}
+
+@media (max-width: 768px) {
+    /* Especificidad 002*/
+    header + p {
+        display: none;
+    }
+}
